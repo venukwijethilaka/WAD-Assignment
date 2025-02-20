@@ -1,0 +1,450 @@
+/*common elements*/
+
+*{
+    color: aliceblue;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    
+}
+a{
+    text-decoration: none;
+}
+hr{
+    border: 0.5px solid white;
+    width:80%;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Header section styling*/
+header {
+    background-color: rgb(14, 52, 113);
+    border-radius: 200px;
+    margin-top: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: sticky;  
+    top: -10px;
+    padding: 0 20px; 
+    z-index: 1000;
+}
+
+ /*left content*/
+.header-left-content {
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+
+
+
+.main-name {
+    text-align: center;
+    line-height: 1; 
+    white-space: nowrap;
+}
+
+
+.main-icon img {
+    width: 70px;
+    display: block;
+    padding: 0;
+}
+.main-icon img:hover{
+    animation: glowup1 0.5s forwards;
+}
+.main-icon img:active{
+    animation: glowdown 0.5s;
+}
+
+/*right content*/
+ 
+.header-right-content{
+    position: absolute;
+    right: 30px;
+    top:14px;
+    display: flex;
+    justify-content: flex-end;
+    align-content:center;
+    flex-direction: column;
+}
+.header-right-content p:hover{
+    animation: glowup1 0.5s forwards;
+}
+.header-right-content img:hover{
+    animation: glowup1 0.5s forwards;
+}
+.header-right-content p:active{
+    animation: glowdown1 0.5s forwards;
+}
+.header-right-content img:active{
+    animation: glowdown1 0.5s forwards;
+}
+
+/*middle content*/
+
+.header-content-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+/*Search bar styling*/
+
+.header-content-middle-top{
+    margin-right: 200px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+#search-bar{
+    height: 34px;
+    width: 30vw;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 0;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    color: black;
+}
+#search-btn{
+    background-color: rgb(14, 52, 113);
+    border: 0;
+    border-radius: 10px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+/*navigation styling*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+    gap: 20px;
+    position: absolute;
+    top: 78px;
+    left: 52%;
+    width: 100%;    
+    height: 40px;
+}
+
+nav div {
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+nav div:hover{  
+    background-color: rgba(166, 192, 234, 0.519);
+    
+} 
+nav div:active{
+    animation: glowdown1 0.5s;
+}
+@keyframes glowdown1{
+    0%{
+        scale: 1;
+
+    }
+    100%{
+        scale:0.9;
+    }
+}
+nav div ul.slide{
+    width: auto;
+    background-color:rgb(14, 52, 113) ;
+    position: absolute;
+    left: -15px;
+    z-index: 999;
+    transform: translateX(0);
+    display: none;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+    
+}
+
+nav div:hover ul.slide{
+    display: block;
+    border-radius: 10px;
+}
+
+nav div ul.slide li{
+    display: block ;
+    text-align:center;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+nav div ul.slide li:hover{
+    background-color: rgba(166, 192, 234, 0.519);
+    border-bottom:1px solid white;
+    
+}
+nav div ul.slide li:active{
+    animation: glowdown1 0.5s;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*main section styling*/
+
+/*Banner styling*/
+.container{
+    width: 60%;
+    margin: 20px;
+    margin-left: 30px;
+    border-radius: 200px;
+    transform: translate(-50% -50%);
+    overflow: hidden;
+    box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.26);
+    animation: glowup 0.8s;
+    z-index: 800;
+}
+.banner{
+    display: flex;
+    width: 100%;
+    animation: slide 16s infinite;
+}
+@media (max-width:680px) and (min-width:1200px)
+{
+    .container{
+        width: 60%;
+        margin: 20px;
+        margin-left: 30px;
+        border-radius: 200px;
+        transform: translate(-50% -50%);
+        overflow: hidden;
+        box-shadow: 3px -1px 5px rgba(0, 0, 0, 0.26);
+        animation: glowup 0.8s;
+        z-index: 800;
+    }
+    .banner{
+        display: flex;
+        width: 100%;
+        animation: slide 16s infinite;
+    }
+
+}
+
+@keyframes slide{
+    0%{
+        transform:translatex(0);
+    }
+    
+    33%{
+        transform:translatex(0);
+    }
+    38%{
+        transform:translatex(-100%);
+    }
+    66%{
+        transform:translatex(-100%);
+    }
+    71%{
+        transform:translatex(-200%);
+    }
+    100%{
+        transform:translatex(-200%);
+    }
+}
+.banner img{
+    width: 100%;
+    
+}
+.home-text{
+    color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    bottom: 200px;
+    z-index: 800;
+    left:1100px;
+    animation: slideleft 2s;
+}
+@keyframes slideleft{
+    0%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes glowup{
+    0%{
+        scale: 0.9;
+
+    }
+    100%{
+        scale:1;
+    }
+}
+.home-text h1{
+    color: black;
+}
+.home-text p{
+    color: black;
+}
+.shop{
+    font-size: 1em;
+    padding: 10px 20px;
+    border: 0;
+    background-color:rgb(14, 52, 113) ;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.shop:hover{
+    
+    animation: glowup1 1s forwards;
+}
+@keyframes glowup1{
+    0%{
+        scale: 1;
+
+    }
+    100%{
+        scale:1.1;
+    }
+}
+.shop:active{
+    opacity: 0.6;
+    animation: glowdown 0.5s;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Footer section styling*/
+
+footer{
+
+    display: flex;
+    bottom:0;
+    flex-direction: column;
+    height: 300px;
+    background-color:rgb(7, 21, 44);
+    border-radius: 60px 60px 0px 0px;
+
+}
+
+.footer-upper{
+    border-radius: 60px 60px 0px 0px;
+    height:50px;
+    background-color:rgb(66, 75, 88);
+    padding-left: 100px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+}
+
+.footer-upper .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    
+}
+.footer-upper .social-media img:hover{
+    animation: updown 0.7s 1;
+}
+.footer-upper .social-media img:active{
+    animation: glowdown 0.7s;
+}
+@keyframes updown{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes glowdown{
+    0%{
+        scale: 1.1;
+
+    }
+    100%{
+        scale:0.9;
+    }
+}
+
+.footer-upper .feedback{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center ;
+    width: 80%;
+    
+}
+
+#feedbacks{
+    height: 30px;
+    width: 300px;
+    color: black;
+    border: 0;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#feedback-submit{
+    height: 32px;
+    color: black;
+    border: 0;
+    border-radius: 0px 16px 0px 0px ;
+    cursor: pointer;
+    background-color: rgb(119, 164, 203);
+}
+#feedback-submit:hover{
+    background-color: rgb(128, 125, 125);
+}
+#feedback-submit:active{
+    background-color: rgb(119, 164, 203);
+}
+.footer-middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-middle div{
+    margin: 10px 100px;
+    line-height: 25px; 
+}
+
+.footer-middle div ul li{
+    font-style: italic;
+}
+.footer-middle div ul li:hover{
+    color: rgb(56, 113, 163);
+}
+.footer-middle div ul li:active{
+    color: white;
+}
+.footer-lower{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+
