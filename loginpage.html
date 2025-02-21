@@ -10,20 +10,22 @@
 <body>
     <div class="container">
         <div class="login">
+            <a href="mainpage.html"><img src="image/home.png" alt="home"></a>
             <h1>Log In</h1><hr>
         </div>
         <div class="except">
-            <label for="username">Username : </label>
-            <input type="text" id="username" placeholder="  myname@gmail.com">
-            <br><br>
-            <label for="Password">Password : </label>
-            <input type="text" id="Password" placeholder="   *********">
-            <br><br>
-            <p id="FP"><a href="#">Forgot Password?</a>   |  <a href="#"> Already Haven`t An Account?</a></p>
-            <br>
-            <button id="LB">Log In</button>
-            <br><br>
-            <p id="FP"></p>
+            <form action="index.php" method="post">
+                <label for="username">E-mail : </label>
+                <input type="text" id="username" placeholder="  myname@gmail.com"required>
+                <br><br>
+                <label for="Password">Password : </label>
+                <input type="text" id="Password" placeholder="   *********"required>
+                <br><br>
+                <p id="FP"><a href="forgotPassword.html">Forgot Password?</a>   |  <a href="signup.html"> Already Haven`t An Account?</a></p>
+                <br>
+                <a href="#"><button id="LB" type="submit">Log In</button></a>
+                <br><br>    
+            </form>
 
         </div>
     </div>
